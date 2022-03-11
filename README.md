@@ -11,11 +11,12 @@ This file contains code for importing, cleaning, and processing the zips.csv fil
 and returning a list of zip codes to use for scraping.
 
 ### scraper.py
-This file contains code to navigate through listings on Carvana.com and collect data from these 
-listings. 
+This file contains code to navigate through listings pages on Carvana.com and collect data 
+from each listing. We use selenium to click through listings and regular expressions to parse 
+each listing. 
 
 ### clean_and_agg.py
-This file contains code for aggregating the many dataframes that we collected separately through scraping. 
+This file contains code for aggregating the many dataframes that we collected individually. 
 We combine these into a single dataframe, with rows representing listings and columns representing
 vehicle features. This dataframe will contain all the necessary inputs for our neural net.
 
