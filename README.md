@@ -8,21 +8,27 @@ data for every zip code in each territory and state in the US.
 
 ### generate_zip_codes.py
 This file contains code for importing, cleaning, and processing the zips.csv file 
-and returning a list of zip codes to use in for scraping.
+and returning a list of zip codes to use for scraping.
 
+### scraper.py
+This file contains code to navigate through listings on Carvana.com and collect data from these 
+listings. 
 
 ### clean_and_agg.py
 This file contains code for aggregating the many dataframes that we collected separately through scraping. 
-We combine these into a single dataframe, which contains all the necessary inputs for our neural net.
-
-### neural_net.py
-
-
-### scraper.py
-
+We combine these into a single dataframe, with rows representing listings and columns representing
+vehicle features. This dataframe will contain all the necessary inputs for our neural net.
 
 ### agg_df_3.csv
 The data we collected.
+
+### neural_net.py
+This file contains code for training and testing a model. The model takes features of any car (the columns
+of our dataframe) as input, and returns a predicted price. We split our data into training and testing
+subsets in order to validate our model, and we end up with reasonably accurate predictions.
+
+
+
 
 
 
