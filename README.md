@@ -21,7 +21,7 @@ We combine these into a single dataframe, with rows representing listings and co
 vehicle features. This dataframe will contain all the necessary inputs for our neural net.
 
 ### agg_df_3.csv
-The data we collected.
+This file contains all the data that we collected through scraping.
 
 ### neural_net.py
 This file contains code for training and testing a model. The model takes features of any car (the columns
