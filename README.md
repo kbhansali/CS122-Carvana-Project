@@ -6,7 +6,7 @@ generate your desired outputs.
 This is the raw csv file from which we are generating our list of zip codes. It contains
 data for every zip code in each territory and state in the US.
 
-# generate_zip_codes.py
+### generate_zip_codes.py
 This file contains code for importing, cleaning, and processing the zips.csv file 
 and returning a list of zip codes to use in for scraping.
 
