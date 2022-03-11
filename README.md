@@ -20,6 +20,10 @@ and returning a list of zip codes to use in for scraping.
 ### scraper.py
 
 
+### agg_df_3.csv
+The data we collected.
+
+
 
 
 
