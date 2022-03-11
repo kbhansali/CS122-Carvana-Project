@@ -11,6 +11,15 @@ This file contains code for importing, cleaning, and processing the zips.csv fil
 and returning a list of zip codes to use in for scraping.
 
 
+### clean_and_agg.py
+
+
+### neural_net.py
+
+
+### scraper.py
+
+
 
 
 
