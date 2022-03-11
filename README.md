@@ -12,7 +12,8 @@ and returning a list of zip codes to use in for scraping.
 
 
 ### clean_and_agg.py
-
+This file contains code for aggregating the many dataframes that we collected separately through scraping. 
+We combine these into a single dataframe, which contains all the necessary inputs for our neural net.
 
 ### neural_net.py
 
