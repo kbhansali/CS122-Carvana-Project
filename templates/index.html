@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <meta charset="utf-8">
+        <title>My Title</title>
+    </head>
+    <BODY>
+    {% if proj %}
+        <h3>Calculated Price: ${{proj}}</h3>
+    {% else %}
+    {% endif %}
+    <br>
+        <h2>Carvana Pricing Model</h2>
+        <div class="checklist">
+            <form method="POST" action="/">
+                <ol>
+                    <li>
+                        <label for="year">Model Year(2009 to 2022):</label><br>
+                        <input type="number" id="year" name="year" min="2009" max="2022" value="2009"><br>
+                    </li>
+                    <li>
+                        Make(Manufacturer):<br>
+                        <select name="make" id="make" size="10">
+                            <option value="Acura" selected="selected">Acura</option>
+                            <option value="Alfa Romeo">Alfa Romeo</option>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Buick">Buick</option>
+                            <option value="Cadillac">Cadillac</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Chrystler">Chrystler</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="FIAT">FIAT</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Genesis">Genesis</option>
+                            <option value="GMC">GMC</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="INFINITI">INFINITI</option>
+                            <option value="Jaguar">Jaguar</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Land Rover">Land Rover</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Lincoln">Lincoln</option>
+                            <option value="Maserati">Maserati</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Mercury">Mercury</option>
+                            <option value="MINI">MINI</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Pontiac">Pontiac</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Ram">Ram</option>
+                            <option value="Saab">Saab</option>
+                            <option value="Saturn">Saturn</option>
+                            <option value="Scion">Scion</option>
+                            <option value="smart">smart</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Volvo">Volvo</option>
+                        </select><br>
+                    </li>
+                    <li>
+                        <label for="model">Model(Case-Sensitive):</label><br>
+                        <input type="text" id="model" name="model" value="MDX"><br>
+                    </li>
+                    <li>
+                        <label for="type">Type(Case-Sensitive):</label><br>
+                        <input type="text" id="type" name="type" value="Sport Utility"><br>
+                    </li>
+                    <li>
+                        Num of Doors:<br>
+                        <select name="door" id="door" size="2">
+                            <option value="2D" selected="selected">2D</option>
+                            <option value="4D">4D</option>
+                        </select><br>
+                    </li>
+                    <li>
+                        <label for="mileage">Mileage(0 to 118,000):</label><br>
+                        <input type="number" id="mileage" name="mileage" min="0" max="118000" value="118000"><br>
+                    </li>
+                    <li>
+                        Basic Info(Engine, Interior Color, Exterior Color, Door + Car Type, Fuel Efficiency, A/M, Drive, keys, seats):<br>
+                        <label for="engine">Engine:</label>
+                        <input type="text" id="engine" name="engine" value="V8, 6.2 Liter"><br>
+                        <label for="interior">Interior Color:</label><br>
+                        <select name="interior" id="interior" size="5">
+                            <option value="Black" selected="selected">Black</option>
+                            <option value="Silver">Silver</option>
+                            <option value="White">White</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Green">Green</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Other">Other</option>
+                        </select><br>
+                        <label for="exterior">Exterior Color:</label><br>
+                        <select name="exterior" id="exterior" size="5">
+                            <option value="Black" selected="selected">Black</option>
+                            <option value="Silver">Silver</option>
+                            <option value="White">White</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Green">Green</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Other">Other</option>
+                        </select><br>
+                        <label for="dact">Door and Car Type:</label>
+                        <input type="text" id="dact" name="dact" value="2 Door Coupe"><br>
+                        <label for="city">Fuel Efficiency(city):</label>
+                        <input type="number" id="city" name="city" min="1" max="50" value="20"><br>
+                        <label for="high">Fuel Efficiency(highway):</label>
+                        <input type="number" id="high" name="high" min="1" max="50" value="30"><br>
+                        <label for="aom">Automatic or Manual:</label>
+                        <input type="text" id="aom" name="aom" value="Manual, 6-Spd"><br>
+                        <label for="drive">Drive:</label><br>
+                        <select name="drive" id="drive" size="5">
+                            <option value="FWD" selected="selected">FWD</option>
+                            <option value="RWD">RWD</option>
+                            <option value="AWD">AWD</option>
+                            <option value="4WD">4WD</option>
+                            <option value="2WD">2WD</option>
+                        </select><br>
+                        <label for="keys">Keys:</label>
+                        <input type="text" id="keys" name="keys" value="1 Key"><br>
+                        <label for="seats">Seats:</label>
+                        <input type="number" id="seats" name="seats" min="1" max="9" value="5"><br>
+                    </li>
+                    <li>
+                        <label for="type">Installed Packages:</label><br>
+                        <input type="text" id="package" name="package"><br>
+                    </li>
+                    <li>
+                        <label for="type">Installed Options:</label><br>
+                        <input type="text" id="options" name="options"><br>
+                    </li>
+                    <li>
+                        <label for="zip">State(2 letters all caps):</label><br>
+                        <input type="text" id="zip" name="zip" value="AK"><br>
+                    </li>
+                    <li>
+                        "150-Point Inspection List: click all that are non-optimal"<br>
+                        <select name="150_point" id="150_point" size="20" multiple>
+                            <option value="0" selected="selected">None: Car in perfect condition</option>
+                            <optgroup label="FROM THE VIN">
+                                <option value="1">Correct VIN plate and anti-theft labels</option>
+                                <option value="2">Clean Experian Auto Check Confirm</option>
+                                <option value="3">No reported accidents/flood damage/salvage</option>
+                            </optgroup>
+                            <optgroup label="UNDER THE HOOD">
+                                <option value="4">Battery (condition, fluid level, load test)</option>
+                                <option value="5">Alternator (belt condition/tension, charging)</option>
+                                <option value="6">Water pump (noise/leaks)</option>
+                                <option value="7">Ignition system operation</option>
+                                <option value="8">Fuel system operation (connections/leakage)</option>
+                                <option value="9">Fuel filter (replace per maintenance schedule)</option>
+                                <option value="10">Radiator (leaks, road hazard damage)</option>
+                                <option value="11">Coolant recovery tank (condition, fluid level, sensor operation)</option>
+                                <option value="12">A/C condenser (corrosion, road hazard damage)</option>
+                                <option value="13">Cooling fan operation</option>
+                                <option value="14">Coolant (replace if discolored, insufficient protection)</option>
+                                <option value="15">Coolant hoses (check condition)</option>
+                                <option value="16">Power steering (fluid level, belt condition/tension)</option>
+                                <option value="17">AC compressor (proper cycling, belt condition/tension)</option>
+                                <option value="18">Heater valve adjustment</option>
+                                <option value="19">Engine valve noise</option>
+                                <option value="20">Engine/transmission mount condition</option>
+                                <option value="21">Engine condition (visual verification of oil change maintenance)</option>
+                                <option value="22">Brake master cylinder and booster (operation/leaks)</option>
+                                <option value="23">Tire tread depth—Record tire tread depth at least 5/32"</option>
+                                <option value="24">Tires/condition/wear pattern/correct pressure</option>
+                                <option value="25">Tires (check for uneven wear or sidewall cracking)</option>
+                                <option value="26">Wheels/Rims (check for damage)</option>
+                                <option value="27">Valve stem condition</option>
+                                <option value="28">Wheel lug nuts (all present and properly torqued)</option>
+                                <option value="29">Spare tire (or inflator kit)</option>
+                                <option value="30">AC system leaks (lines/hoses/condenser)</option>
+                                <option value="31">Engine (oil leaks)</option>
+                                <option value="32">Transmission leaks</option>
+                                <option value="33">Coolant leaks</option>
+                                <option value="34">CV Joint/boots/driveshaft/universal joint (cracks, leakage)</option>
+                                <option value="35">Brake pad thickness at least 4mm.</option>
+                                <option value="36">Brake rotor thickness</option>
+                                <option value="37">Brake caliper leakage</option>
+                                <option value="38">Hydraulic brake hose/line leakage and free movement</option>
+                                <option value="39">Suspension (springs proper ride height)</option>
+                                <option value="40">MacPherson strut/shock absorber leakage</option>
+                                <option value="41">Bushing condition</option>
+                                <option value="42">Ball joint and tie rod end tightness</option>
+                                <option value="43">Power steering rack leakage</option>
+                                <option value="44">Entire exhaust system (condition, leaks, noise, catalytic converter, converter shield)</option>
+                                <option value="45">Emissions (meet state/local requirements)</option>
+                            </optgroup>
+                            <optgroup label="VEHICLE EXTERIOR">
+                                <option value="46">Headlights (high/low operation and headlight aim, surface condition)</option>
+                                <option value="47">Brake lights</option>
+                                <option value="48">Turn signal lights (operation, lens condition)</option>
+                                <option value="49">Parking lamps</option>
+                                <option value="50">Fog lamps (if applicable)</option>
+                                <option value="51">Running lights (if applicable)</option>
+                                <option value="52">License plate light</option>
+                                <option value="53">Tail lights (operation, lens condition)</option>
+                                <option value="54">Back-up lamps (operation, lens condition)</option>
+                                <option value="55">Emergency flasher</option>
+                            </optgroup>
+                            <optgroup label="VEHICLE INTERIOR">
+                                <option value="56">Includes owner's manual (if available)</option>
+                                <option value="57">Includes vehicle key(s)</option>
+                                <option value="58">Water leaks (look for evidence of water intrusion)</option>
+                                <option value="59">Fuel gauge operation</option>
+                                <option value="60">Temperature gauge operation</option>
+                                <option value="61">All warning lights illuminated with ignition “ON”</option>
+                                <option value="62">Dash light operation</option>
+                                <option value="63">Windshield wiper/washer operation</option>
+                                <option value="64">Audio System-Radio/CD/Telephone audio inputs, speaker operation</option>
+                                <option value="65">Bluetooth operations (if equipped)</option>
+                                <option value="66">Audio steering wheel controls (if equipped)</option>
+                                <option value="67">Navigation operation (if equipped)</option>
+                                <option value="68">Rear camera (if equipped)</option>
+                                <option value="69">OnStar operation (if equipped, service not provided)</option>
+                                <option value="70">Clock functions</option>
+                                <option value="71">Steering wheel tilt/lock</option>
+                                <option value="72">Sunroof operation (if applicable)</option>
+                                <option value="73">Sunshade operation/condition</option>
+                                <option value="74">Headliner condition</option>
+                                <option value="75">Cigarette lighter/power outlets (if equipped)</option>
+                                <option value="76">Alarm/theft system operation (check remote, if equipped)</option>
+                                <option value="77">SRS air bags (exterior condition/check warning lamp self check)</option>
+                                <option value="78">Outside mirror operation (left and right)</option>
+                                <option value="79">Rearview mirror operation (day/night operation)</option>
+                                <option value="80">Window operation (noise, speed and full travel)</option>
+                                <option value="81">Door locks (check manual and or power operation and child safety function)</option>
+                                <option value="82">Power sliding doors (if equipped)</option>
+                                <option value="83">Seat belts (condition, proper latching and retraction operation)</option>
+                                <option value="84">Seat upholstery/leather condition (front & rear)</option>
+                                <option value="85">Power seat operation (if equipped)</option>
+                                <option value="86">Seat heaters (if equipped and check for proper operation)</option>
+                                <option value="87">Headrest movement (if equipped)</option>
+                                <option value="88">Rear defrost operation</option>
+                                <option value="89">Inside mirror/vanity light operation</option>
+                                <option value="90">Interior lights (switch/door operation, warning chimes)</option>
+                                <option value="91">Glove box/glove box light operation</option>
+                                <option value="92">Luggage compartment (jack and tool present)</option>
+                                <option value="93">Trunk lid release/trunk lid light operation</option>
+                                <option value="94">Liftgate operation (manual/power functions if equipped)</option>
+                                <option value="95">Fuel door release</option>
+                                <option value="96">Hood release operation</option>
+                            </optgroup>
+                            <optgroup label="HOW IT DRIVES">
+                                <option value="97">Engine start-up cold/hot</option>
+                                <option value="98">Abnormal noises/engine running</option>
+                                <option value="99">Engine idle-smooth idle and acceleration from idle</option>
+                                <option value="100">Instrument pack gauges for normal operation</option>
+                                <option value="101">Fluid leaks (while engine is running)</option>
+                                <option value="102">Trip computer (if equipped)</option>
+                                <option value="103">Cruise control (if equipped)</option>
+                                <option value="104">Automatic/manual transmission shift, paddle shift feature</option>
+                                <option value="105">Clutch operation/engagement</option>
+                                <option value="106">Abnormal wind noise</option>
+                                <option value="107">Engine performance</option>
+                                <option value="108">Vibration (drivetrain and wheels)</option>
+                                <option value="109">Straight-line stability/pull</option>
+                                <option value="110">Steering wheel alignment</option>
+                                <option value="111">Braking system (including ABS)</option>
+                                <option value="112">Parking brake</option>
+                                <option value="113">Vehicle handling</option>
+                                <option value="114">Safety belts</option>
+                                <option value="115">Blind spot monitoring (if equipped)</option>
+                                <option value="116">Navigation system/compass (if equipped)</option>
+                            </optgroup>
+                            <optgroup label="HOW IT LOOKS">
+                                <option value="117">Exterior lamp/reflector</option>
+                                <option value="118">Sunroof glass condition (if equipped)</option>
+                                <option value="119">Engine idle-smooth idle and acceleration from idle</option>
+                                <option value="120">Windshield condition</option>
+                                <option value="121">Wipers/condition of mechanism/blades</option>
+                                <option value="122">Side/rear window condition</option>
+                                <option value="123">Underhood (clean engine compartment)</option>
+                                <option value="124">Grille condition (trim, emblems)</option>
+                                <option value="125">Hood condition</option>
+                                <option value="126">Driver's side (front/rear)</option>
+                                <option value="127">Passenger side (front/rear)</option>
+                                <option value="128">Front bumper condition</option>
+                                <option value="129">Rear bumper condition</option>
+                                <option value="130">Trunk lid/Liftgate condition</option>
+                                <option value="131">Roof condition</option>
+                                <option value="132">Exterior mirrors condition</option>
+                                <option value="133">Fit/condition of glove box, console box and trim</option>
+                                <option value="134">Stowage compartment</option>
+                                <option value="135">Sun visor and vanity mirror operation</option>
+                                <option value="136">Glove box and door lamps</option>
+                                <option value="137">Load space/trunk condition</option>
+                                <option value="138">All mirrors (condition/operation)</option>
+                                <option value="139">Trim/carpets condition</option>
+                                <option value="140">Dash and instrument panels condition</option>
+                                <option value="141">Console/center arm rest/cup holders condition</option>
+                                <option value="142">Front doors (controls, trim condition)</option>
+                                <option value="143">Rear doors/quarter Trim (controls, trim condition)</option>
+                                <option value="144">Luggage compartment (mat/trim/carpet condition)</option>
+                                <option value="145">Includes standard set of floor mats</option>
+                            </optgroup>
+                            <optgroup label="DETAILING">
+                                <option value="146">Complete premium detail (wash, wax and high speed buff)</option>
+                                <option value="147">Complete premium interior detail including odor test</option>
+                                <option value="148">Apply tire dressing to all (4) tires</option>
+                                <option value="149">Clean engine compartment</option>
+                                <option value="150">Clean all windows</option>
+                            </optgroup>
+                        </select><br>
+                    </li>
+                </ol>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </BODY>
+</HTML>
